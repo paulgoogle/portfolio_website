@@ -1,0 +1,129 @@
+//tablets and smaller
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+}
+
+//smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #header {
+    &-home {
+      .header-content {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  //stack grid columns
+  #skills .specials,
+  #stats-section .stats,
+  #process-section .process,
+  #testimonial .testimonials,
+  #logo-section .about-logos,
+  .items,
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .specials div {
+    border-bottom: 1px $light-color solid;
+    padding-bottom: 1rem;
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  #stats-section {
+    .stats div {
+      padding: 2rem 0 1rem 0;
+    }
+  }
+
+  //about
+  #about-section {
+    .about-info {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "aw1"
+        "aw2"
+        "aw3";
+    }
+  }
+
+  //contact
+  #contact {
+    .text-fields {
+      grid-template-areas:
+        "name"
+        "subject"
+        "email"
+        "phone"
+        "message";
+    }
+  }
+  .contact-info div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #555;
+
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  //footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+
+//landscape
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
